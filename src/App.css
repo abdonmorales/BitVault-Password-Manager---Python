@@ -1,0 +1,570 @@
+/* Styles for language switcher */
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.lang-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+}
+
+.auth-container {
+  position: relative;
+  height: 100vh;
+}
+
+.auth-container .language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.bitvault-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Encabezado */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botones */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.add-button {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.add-button:hover {
+  background-color: var(--secondary-dark);
+}
+
+.import-export-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.import-export-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.logout-button {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.back-button {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #7f8c8d;
+}
+
+/* Contenido principal */
+.app-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* MasterKeyAuth */
+.master-key-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.master-key-form {
+  background-color: var(--card-color);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 400px;
+}
+
+.master-key-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.info-text {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.password-input-container {
+  display: flex;
+  position: relative;
+}
+
+.password-input-container input {
+  flex: 1;
+  padding-right: 100px;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 75px; /* Ajustado para no solapar con el botón generar */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.error-message {
+  color: var(--danger-color);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* PasswordList */
+.password-list-container {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+}
+
+.password-list-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input,
+.category-filter {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.password-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.no-passwords-message {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* PasswordItem */
+.password-item {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s;
+}
+
+.password-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.password-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.password-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.password-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: var(--border-radius);
+}
+
+.edit-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.delete-btn.confirm {
+  background-color: var(--warning-color);
+}
+
+.password-details {
+  font-size: 0.9rem;
+}
+
+.detail-row {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.detail-label {
+  font-weight: 600;
+  width: 100px;
+  color: #666;
+}
+
+.detail-value {
+  flex: 1;
+  word-break: break-word;
+}
+
+.password-field {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Aumentar el espacio entre botones */
+  flex-wrap: wrap; /* Permitir que los botones se envuelvan si es necesario */
+}
+
+.toggle-password,
+.copy-btn {
+  padding: 5px 8px; /* Botones ligeramente más grandes */
+  font-size: 0.75rem;
+  background-color: #f0f0f0;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap; /* Evitar que el texto se rompa */
+}
+
+.category {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--primary-color);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.notes {
+  font-style: italic;
+  color: #666;
+}
+
+.dates {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #999;
+  justify-content: space-between;
+}
+
+/* AddPasswordForm */
+.password-form-container {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.password-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.password-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-input-container input {
+  flex: 1;
+  padding-right: 120px; /* Espacio adicional para los botones */
+}
+
+.generate-password-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.password-strength {
+  margin-top: 5px;
+  height: 5px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.strength-meter {
+  height: 100%;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.strength-text {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.strength-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+  display: block;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  min-width: 100px;
+}
+
+/* ImportExport */
+.import-export-container {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.import-export-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.import-export-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.import-export-section h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.import-export-section p {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.export-btn,
+.import-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+}
+
+.file-input-container {
+  margin-bottom: 15px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.file-selected {
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.import-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .password-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+  }
+  
+  .detail-label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
