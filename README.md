@@ -33,13 +33,23 @@ git clone https://git.moralesresearch.org/abdonmorales/bitvault.git
 
 2. Install dependencies:
 ```
-cd bitvault/src
+cd bitvault
 npm install
 ```
 
-3. Start the application:
+3. Start the application in development mode:
 ```
 npm start
+```
+
+4. Build the application for production:
+```
+npm run build
+```
+
+5. Serve the built application:
+```
+npx serve -s src/build
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser

@@ -1,0 +1,112 @@
+{
+  "common": {
+    "app": {
+      "title": "BitVault Alpha 0.0.2",
+      "subtitle": "Secure Password Manager"
+    },
+    "actions": {
+      "back": "Back",
+      "cancel": "Cancel",
+      "save": "Save",
+      "update": "Update",
+      "delete": "Delete",
+      "edit": "Edit",
+      "confirm": "Confirm?",
+      "copy": "Copy",
+      "show": "Show",
+      "hide": "Hide",
+      "login": "Login",
+      "logout": "Logout"
+    },
+    "messages": {
+      "copied": "Password copied to clipboard",
+      "no_passwords": "No passwords saved yet. Add a new one!",
+      "no_matches": "No passwords match your search.",
+      "error_importing": "Error importing data. Make sure the format is correct.",
+      "error_exporting": "Error exporting data",
+      "success_importing": "Data imported successfully",
+      "success_exporting": "Data exported successfully"
+    }
+  },
+  "auth": {
+    "masterKey": "Master Key",
+    "confirmMasterKey": "Confirm Master Key",
+    "setupTitle": "Setup Master Key",
+    "loginTitle": "Login",
+    "setupInfo": "Create a master key to protect your passwords. This key will be required each time you access your data. You will not be able to recover your passwords if you forget this key.",
+    "loginInfo": "Enter your master key to access your saved passwords.",
+    "createButton": "Create Master Key",
+    "loginButton": "Login",
+    "errors": {
+      "min_length": "Master key must be at least 8 characters long",
+      "not_matching": "Master keys do not match",
+      "incorrect": "Incorrect master key"
+    },
+    "placeholder": {
+      "enter": "Enter your master key",
+      "confirm": "Confirm your master key"
+    }
+  },
+  "passwords": {
+    "add": "New Password",
+    "edit": "Edit Password",
+    "title": "Title",
+    "username": "Username",
+    "password": "Password",
+    "url": "URL",
+    "category": "Category",
+    "notes": "Notes",
+    "created": "Created",
+    "updated": "Updated",
+    "placeholders": {
+      "title": "E.g., Gmail, Amazon, Netflix...",
+      "username": "Username or email",
+      "password": "Password",
+      "url": "https://example.com",
+      "category": "E.g., Work, Personal, Finance...",
+      "notes": "Additional information...",
+      "search": "Search passwords..."
+    },
+    "generate": "Generate",
+    "strength": {
+      "very_weak": "Very weak",
+      "weak": "Weak",
+      "fair": "Fair",
+      "strong": "Strong",
+      "very_strong": "Very strong",
+      "feedback": {
+        "too_short": "Password is too short.",
+        "add_uppercase": "Add uppercase letters.",
+        "add_lowercase": "Add lowercase letters.",
+        "add_numbers": "Add numbers.",
+        "add_special": "Add special characters."
+      }
+    },
+    "filter": {
+      "all_categories": "All categories",
+      "uncategorized": "Uncategorized"
+    }
+  },
+  "importExport": {
+    "title": "Import/Export Passwords",
+    "export": {
+      "title": "Export Passwords",
+      "description": "Save your passwords to an encrypted JSON file.",
+      "button": "Export Passwords"
+    },
+    "import": {
+      "title": "Import Passwords",
+      "description": "Import passwords from a previously exported JSON file.",
+      "button": "Import Passwords",
+      "select_file": "Select File"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "language": {
+      "title": "Language",
+      "en": "English",
+      "es": "Spanish"
+    }
+  }
+}
