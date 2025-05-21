@@ -1,24 +1,60 @@
-# BitVault
+# BitVault - Secure Password Manager
 
+BitVault is a secure password manager that allows you to store your passwords locally with AES encryption. All your passwords are saved encrypted in your browser using local storage, protected with a master key that only you know.
 
+## Features
 
-## Getting started
+- **Secure local storage**: All passwords are encrypted with AES before being stored
+- **Master key protection**: Access your passwords with a single master key
+- **Password generator**: Create strong and secure passwords with the built-in generator
+- **Category organization**: Classify your passwords by categories for better organization
+- **Import/Export**: Create backups of your encrypted passwords
+- **Intuitive interface**: Simple and pleasant design to manage your credentials
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Technologies used
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- React.js with TypeScript
+- CryptoJS for secure encryption
+- LocalStorage for data persistence
 
-## Add your files
+## Security
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- BitVault uses the AES encryption algorithm to protect your passwords
+- Your master key is never stored, only a hash is saved for verification
+- No information is sent to external servers, everything remains on your device
+- Automatic session timeout for added security
 
+## Installation and usage
+
+1. Clone this repository:
 ```
-cd existing_repo
-git remote add origin https://git.moralesresearch.org/abdonmorales/bitvault.git
-git branch -M main
-git push -uf origin main
+git clone https://git.moralesresearch.org/abdonmorales/bitvault.git
 ```
+
+2. Install dependencies:
+```
+cd bitvault/src
+npm install
+```
+
+3. Start the application:
+```
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## License
+
+This project is licensed under the terms of the MIT License.
+
+## Contributions
+
+Contributions are welcome. Please open an issue first to discuss the changes you wish to make.
+
+## Security Note
+
+Remember that the security of your passwords depends on the strength of your master key. Use a secure master key that has at least 12 characters, including letters (uppercase and lowercase), numbers, and special symbols.
 
 ## Integrate with your tools
 
